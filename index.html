@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>A simple clock</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+</head>
+
+<body translate="no">
+  <img id="img" src="" width="75" />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js'></script>
+  <script>
+	var imgList = ["foo.png", "foo2.png", "foo3.png", "foo4.png"];
+	
+	var img = document.getElementById("img");
+	var i;
+	setInterval(
+	i = function() {
+		var index = moment().format("HH") % 4;
+		img.src = imgList[index];
+	}, 600000);
+	i();
+  </script>
+</body>
+</html>
