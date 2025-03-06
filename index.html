@@ -14,13 +14,13 @@
   <img id="img" src="" width="75" />
   <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js'></script>
   <script>
-	var imgList = ["foo.png", "foo2.png", "foo3.png", "foo4.png"];
+	var imgList = ["foo.png", "foo2.png", "foo3.png", "foo4.jpg", "foo5.jpg", "foo6.jpg", "foo7.jpg", "foo8.jpg", "foo9.jpg", "foo10.jpg"];
 	
 	var img = document.getElementById("img");
 	var i;
 	setInterval(
 	i = function() {
-		var index = moment().format("HH") % 4;
+		var index = moment().format("HH") % 10;
 		img.src = imgList[index];
 	}, 600000);
 	i();
